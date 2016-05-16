@@ -6,7 +6,7 @@ provider "aws" {
 
 resource "aws_key_pair" "provisioner" {
   key_name = "terransible_provisioner"
-  public_key = "${file("../keys/terransible_provisioner.pub")}"
+  public_key = "${file("keys/terransible_provisioner.pub")}"
 }
 
 resource "aws_security_group" "ssh_and_http" {
